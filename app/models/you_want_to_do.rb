@@ -1,0 +1,2 @@
+class YouWantToDo < ApplicationRecord
+end

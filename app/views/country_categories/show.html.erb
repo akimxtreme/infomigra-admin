@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @country_category.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @country_category.description %>
+</p>
+
+<p>
+  <strong>Percentage profile:</strong>
+  <%= @country_category.percentage_profile %>
+</p>
+
+<%= link_to 'Edit', edit_country_category_path(@country_category) %> |
+<%= link_to 'Back', country_categories_path %>

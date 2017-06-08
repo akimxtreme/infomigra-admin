@@ -1,0 +1,32 @@
+<%= form_for(category_step) do |f| %>
+  <% if category_step.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(category_step.errors.count, "error") %> prohibited this category_step from being saved:</h2>
+
+      <ul>
+      <% category_step.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :icon %>
+    <%= f.text_field :icon %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class SexualIdentity < ApplicationRecord
+end

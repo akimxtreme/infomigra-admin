@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Current Situation Countries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @current_situation_countries.each do |current_situation_country| %>
+      <tr>
+        <td><%= current_situation_country.name %></td>
+        <td><%= current_situation_country.description %></td>
+        <td><%= link_to 'Show', current_situation_country %></td>
+        <td><%= link_to 'Edit', edit_current_situation_country_path(current_situation_country) %></td>
+        <td><%= link_to 'Destroy', current_situation_country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Current Situation Country', new_current_situation_country_path %>

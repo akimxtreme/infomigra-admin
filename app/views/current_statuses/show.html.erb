@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @current_status.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @current_status.description %>
+</p>
+
+<p>
+  <strong>Percentage profile:</strong>
+  <%= @current_status.percentage_profile %>
+</p>
+
+<%= link_to 'Edit', edit_current_status_path(@current_status) %> |
+<%= link_to 'Back', current_statuses_path %>

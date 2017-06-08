@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @family_bond.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @family_bond.description %>
+</p>
+
+<p>
+  <strong>Percentage profile:</strong>
+  <%= @family_bond.percentage_profile %>
+</p>
+
+<%= link_to 'Edit', edit_family_bond_path(@family_bond) %> |
+<%= link_to 'Back', family_bonds_path %>

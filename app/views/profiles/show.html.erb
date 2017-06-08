@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Country categories:</strong>
+  <%= @profile.country_categories %>
+</p>
+
+<p>
+  <strong>Situations arrivals countries:</strong>
+  <%= @profile.situations_arrivals_countries %>
+</p>
+
+<p>
+  <strong>Current statuses:</strong>
+  <%= @profile.current_statuses %>
+</p>
+
+<p>
+  <strong>Family bonds:</strong>
+  <%= @profile.family_bonds %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>

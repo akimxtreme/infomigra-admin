@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @distance.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @distance.description %>
+</p>
+
+<p>
+  <strong>Kilometers:</strong>
+  <%= @distance.kilometers %>
+</p>
+
+<%= link_to 'Edit', edit_distance_path(@distance) %> |
+<%= link_to 'Back', distances_path %>

@@ -1,0 +1,2 @@
+class CategoryStep < ApplicationRecord
+end

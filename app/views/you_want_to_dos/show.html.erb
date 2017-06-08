@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @you_want_to_do.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @you_want_to_do.description %>
+</p>
+
+<%= link_to 'Edit', edit_you_want_to_do_path(@you_want_to_do) %> |
+<%= link_to 'Back', you_want_to_dos_path %>

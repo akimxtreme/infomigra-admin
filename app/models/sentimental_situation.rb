@@ -1,0 +1,2 @@
+class SentimentalSituation < ApplicationRecord
+end

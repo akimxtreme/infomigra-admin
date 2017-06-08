@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>You Want To Dos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @you_want_to_dos.each do |you_want_to_do| %>
+      <tr>
+        <td><%= you_want_to_do.name %></td>
+        <td><%= you_want_to_do.description %></td>
+        <td><%= link_to 'Show', you_want_to_do %></td>
+        <td><%= link_to 'Edit', edit_you_want_to_do_path(you_want_to_do) %></td>
+        <td><%= link_to 'Destroy', you_want_to_do, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New You Want To Do', new_you_want_to_do_path %>

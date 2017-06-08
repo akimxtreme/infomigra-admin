@@ -1,0 +1,2 @@
+class TypeStep < ApplicationRecord
+end

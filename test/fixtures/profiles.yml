@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  country_categories: one
+  situations_arrivals_countries: one
+  current_statuses: one
+  family_bonds: one
+
+two:
+  country_categories: two
+  situations_arrivals_countries: two
+  current_statuses: two
+  family_bonds: two

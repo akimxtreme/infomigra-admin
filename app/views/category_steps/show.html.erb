@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @category_step.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @category_step.description %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= @category_step.icon %>
+</p>
+
+<%= link_to 'Edit', edit_category_step_path(@category_step) %> |
+<%= link_to 'Back', category_steps_path %>

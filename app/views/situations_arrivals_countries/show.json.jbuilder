@@ -1,0 +1,1 @@
+json.partial! "situations_arrivals_countries/situations_arrivals_country", situations_arrivals_country: @situations_arrivals_country

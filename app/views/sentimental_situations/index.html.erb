@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sentimental Situations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sentimental_situations.each do |sentimental_situation| %>
+      <tr>
+        <td><%= sentimental_situation.name %></td>
+        <td><%= sentimental_situation.description %></td>
+        <td><%= link_to 'Show', sentimental_situation %></td>
+        <td><%= link_to 'Edit', edit_sentimental_situation_path(sentimental_situation) %></td>
+        <td><%= link_to 'Destroy', sentimental_situation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sentimental Situation', new_sentimental_situation_path %>

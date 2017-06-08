@@ -1,0 +1,2 @@
+class SituationsArrivalsCountry < ApplicationRecord
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sexual_identity.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sexual_identity.description %>
+</p>
+
+<%= link_to 'Edit', edit_sexual_identity_path(@sexual_identity) %> |
+<%= link_to 'Back', sexual_identities_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sentimental_situation.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sentimental_situation.description %>
+</p>
+
+<%= link_to 'Edit', edit_sentimental_situation_path(@sentimental_situation) %> |
+<%= link_to 'Back', sentimental_situations_path %>

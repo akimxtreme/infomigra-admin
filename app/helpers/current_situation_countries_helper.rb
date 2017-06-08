@@ -1,0 +1,2 @@
+module CurrentSituationCountriesHelper
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @theme_interest.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @theme_interest.description %>
+</p>
+
+<%= link_to 'Edit', edit_theme_interest_path(@theme_interest) %> |
+<%= link_to 'Back', theme_interests_path %>

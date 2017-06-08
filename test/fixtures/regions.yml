@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  roman_number: MyString
+  num_provinces: 1
+  num_communes: 1
+
+two:
+  name: MyString
+  roman_number: MyString
+  num_provinces: 1
+  num_communes: 1

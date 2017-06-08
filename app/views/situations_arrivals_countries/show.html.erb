@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @situations_arrivals_country.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @situations_arrivals_country.description %>
+</p>
+
+<p>
+  <strong>Percentage profile:</strong>
+  <%= @situations_arrivals_country.percentage_profile %>
+</p>
+
+<%= link_to 'Edit', edit_situations_arrivals_country_path(@situations_arrivals_country) %> |
+<%= link_to 'Back', situations_arrivals_countries_path %>

@@ -1,0 +1,2 @@
+class FamilyBond < ApplicationRecord
+end

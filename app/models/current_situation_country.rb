@@ -1,0 +1,2 @@
+class CurrentSituationCountry < ApplicationRecord
+end

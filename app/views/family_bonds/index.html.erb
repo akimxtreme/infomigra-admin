@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Family Bonds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Percentage profile</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @family_bonds.each do |family_bond| %>
+      <tr>
+        <td><%= family_bond.name %></td>
+        <td><%= family_bond.description %></td>
+        <td><%= family_bond.percentage_profile %></td>
+        <td><%= link_to 'Show', family_bond %></td>
+        <td><%= link_to 'Edit', edit_family_bond_path(family_bond) %></td>
+        <td><%= link_to 'Destroy', family_bond, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Family Bond', new_family_bond_path %>
