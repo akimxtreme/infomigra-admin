@@ -4,10 +4,10 @@ one:
   abbreviation: MyString
   name: MyString
   flag_image: MyString
-  country_categories: one
+  country_category: one
 
 two:
   abbreviation: MyString
   name: MyString
   flag_image: MyString
-  country_categories: two
+  country_category: two

@@ -17,7 +17,7 @@ class SituationsArrivalsCountriesControllerTest < ActionDispatch::IntegrationTes
 
   test "should create situations_arrivals_country" do
     assert_difference('SituationsArrivalsCountry.count') do
-      post situations_arrivals_countries_url, params: { situations_arrivals_country: { description: @situations_arrivals_country.description, name: @situations_arrivals_country.name, percentage_profile: @situations_arrivals_country.percentage_profile } }
+      post situations_arrivals_countries_url, params: { situations_arrivals_country: { description: @situations_arrivals_country.description, name: @situations_arrivals_country.name, percentage_profile: @situations_arrivals_country.percentage_profile, slug: @situations_arrivals_country.slug } }
     end
 
     assert_redirected_to situations_arrivals_country_url(SituationsArrivalsCountry.last)
@@ -34,7 +34,7 @@ class SituationsArrivalsCountriesControllerTest < ActionDispatch::IntegrationTes
   end
 
   test "should update situations_arrivals_country" do
-    patch situations_arrivals_country_url(@situations_arrivals_country), params: { situations_arrivals_country: { description: @situations_arrivals_country.description, name: @situations_arrivals_country.name, percentage_profile: @situations_arrivals_country.percentage_profile } }
+    patch situations_arrivals_country_url(@situations_arrivals_country), params: { situations_arrivals_country: { description: @situations_arrivals_country.description, name: @situations_arrivals_country.name, percentage_profile: @situations_arrivals_country.percentage_profile, slug: @situations_arrivals_country.slug } }
     assert_redirected_to situations_arrivals_country_url(@situations_arrivals_country)
   end
 

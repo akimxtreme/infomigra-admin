@@ -17,7 +17,7 @@ class ProvincesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create province" do
     assert_difference('Province.count') do
-      post provinces_url, params: { province: { name: @province.name, num_communes: @province.num_communes, regions_id: @province.regions_id } }
+      post provinces_url, params: { province: { name: @province.name, num_communes: @province.num_communes, region_id: @province.region_id } }
     end
 
     assert_redirected_to province_url(Province.last)
@@ -34,7 +34,7 @@ class ProvincesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update province" do
-    patch province_url(@province), params: { province: { name: @province.name, num_communes: @province.num_communes, regions_id: @province.regions_id } }
+    patch province_url(@province), params: { province: { name: @province.name, num_communes: @province.num_communes, region_id: @province.region_id } }
     assert_redirected_to province_url(@province)
   end
 

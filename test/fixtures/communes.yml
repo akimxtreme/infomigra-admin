@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  provinces: one
+  province: one
 
 two:
   name: MyString
-  provinces: two
+  province: two

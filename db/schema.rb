@@ -10,13 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170609095544) do
+ActiveRecord::Schema.define(version: 20170707023243) do
 
   create_table "abilities", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "active_admin_comments", force: :cascade do |t|
+    t.string   "namespace"
+    t.text     "body"
+    t.string   "resource_type"
+    t.integer  "resource_id"
+    t.string   "author_type"
+    t.integer  "author_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
+    t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
+    t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+  end
+
+  create_table "admin_users", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["email"], name: "index_admin_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
   create_table "availabilities", force: :cascade do |t|
@@ -39,20 +70,20 @@ ActiveRecord::Schema.define(version: 20170609095544) do
 
   create_table "communes", force: :cascade do |t|
     t.string   "name"
-    t.integer  "provinces_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["provinces_id"], name: "index_communes_on_provinces_id"
+    t.integer  "province_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["province_id"], name: "index_communes_on_province_id"
   end
 
   create_table "countries", force: :cascade do |t|
     t.string   "abbreviation"
     t.string   "name"
     t.string   "flag_image"
-    t.integer  "country_categories_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-    t.index ["country_categories_id"], name: "index_countries_on_country_categories_id"
+    t.integer  "country_category_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.index ["country_category_id"], name: "index_countries_on_country_category_id"
   end
 
   create_table "country_categories", force: :cascade do |t|
@@ -149,10 +180,10 @@ ActiveRecord::Schema.define(version: 20170609095544) do
   create_table "provinces", force: :cascade do |t|
     t.string   "name"
     t.integer  "num_communes"
-    t.integer  "regions_id"
+    t.integer  "region_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.index ["regions_id"], name: "index_provinces_on_regions_id"
+    t.index ["region_id"], name: "index_provinces_on_region_id"
   end
 
   create_table "regions", force: :cascade do |t|
@@ -198,12 +229,12 @@ ActiveRecord::Schema.define(version: 20170609095544) do
     t.string   "name"
     t.text     "description"
     t.integer  "position"
-    t.integer  "category_steps_id"
-    t.integer  "type_steps_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.index ["category_steps_id"], name: "index_steps_on_category_steps_id"
-    t.index ["type_steps_id"], name: "index_steps_on_type_steps_id"
+    t.integer  "category_step_id"
+    t.integer  "type_step_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["category_step_id"], name: "index_steps_on_category_step_id"
+    t.index ["type_step_id"], name: "index_steps_on_type_step_id"
   end
 
   create_table "studies", force: :cascade do |t|
