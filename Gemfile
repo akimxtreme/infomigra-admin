@@ -22,6 +22,7 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
+  gem 'thin'
 end
 # Use Puma as the app server
 gem 'puma', '~> 3.9.1'
