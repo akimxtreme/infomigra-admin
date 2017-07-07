@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :user_steps
+  resources :user_availabilities
   resources :steps
   resources :provinces
   resources :communes
