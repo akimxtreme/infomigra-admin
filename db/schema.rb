@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170608113248) do
+ActiveRecord::Schema.define(version: 20170609095544) do
 
   create_table "abilities", force: :cascade do |t|
     t.string   "name"
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20170608113248) do
 
   create_table "current_statuses", force: :cascade do |t|
     t.string   "name"
+    t.string   "slug"
     t.string   "description"
     t.decimal  "percentage_profile"
     t.datetime "created_at",         null: false
@@ -103,6 +104,7 @@ ActiveRecord::Schema.define(version: 20170608113248) do
 
   create_table "family_bonds", force: :cascade do |t|
     t.string   "name"
+    t.string   "slug"
     t.string   "description"
     t.decimal  "percentage_profile"
     t.datetime "created_at",         null: false
@@ -185,6 +187,7 @@ ActiveRecord::Schema.define(version: 20170608113248) do
 
   create_table "situations_arrivals_countries", force: :cascade do |t|
     t.string   "name"
+    t.string   "slug"
     t.string   "description"
     t.decimal  "percentage_profile"
     t.datetime "created_at",         null: false
@@ -224,78 +227,21 @@ ActiveRecord::Schema.define(version: 20170608113248) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "user_availabilities", force: :cascade do |t|
-    t.integer  "abilities_id"
-    t.integer  "users_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["abilities_id"], name: "index_user_availabilities_on_abilities_id"
-    t.index ["users_id"], name: "index_user_availabilities_on_users_id"
-  end
-
-  create_table "user_steps", force: :cascade do |t|
-    t.integer  "users_id"
-    t.integer  "steps_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["steps_id"], name: "index_user_steps_on_steps_id"
-    t.index ["users_id"], name: "index_user_steps_on_users_id"
-  end
-
   create_table "users", force: :cascade do |t|
-    t.string   "nickname"
-    t.string   "first_name"
-    t.string   "second_name"
-    t.string   "first_surname"
-    t.string   "second_surname"
-    t.string   "email"
-    t.integer  "status"
-    t.string   "password"
-    t.integer  "countries_id"
-    t.integer  "communes_id"
-    t.integer  "genders_id"
-    t.integer  "sexual_identities_id"
-    t.integer  "situations_arrivals_countries_id"
-    t.integer  "year_country"
-    t.integer  "month_country"
-    t.integer  "current_situation_countries_id"
-    t.integer  "year_current_situation_countries"
-    t.integer  "month_current_situation_countries"
-    t.integer  "current_statuses"
-    t.integer  "you_want_to_dos_id"
-    t.integer  "sentimental_situations_id"
-    t.boolean  "person_waiting_for_a_child"
-    t.integer  "family_bonds_id"
-    t.integer  "profiles_id"
-    t.date     "birthdate"
-    t.string   "rut"
-    t.string   "street_number"
-    t.string   "latitude_y"
-    t.string   "length_x"
-    t.integer  "distances_id"
-    t.integer  "level_studies_id"
-    t.date     "date_work_start"
-    t.date     "date_work_end"
-    t.boolean  "date_work_end_undefined"
-    t.integer  "studies_id"
-    t.string   "phone"
-    t.string   "description_latest_works"
-    t.string   "description_tasks_performed"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
-    t.index ["communes_id"], name: "index_users_on_communes_id"
-    t.index ["countries_id"], name: "index_users_on_countries_id"
-    t.index ["current_situation_countries_id"], name: "index_users_on_current_situation_countries_id"
-    t.index ["distances_id"], name: "index_users_on_distances_id"
-    t.index ["family_bonds_id"], name: "index_users_on_family_bonds_id"
-    t.index ["genders_id"], name: "index_users_on_genders_id"
-    t.index ["level_studies_id"], name: "index_users_on_level_studies_id"
-    t.index ["profiles_id"], name: "index_users_on_profiles_id"
-    t.index ["sentimental_situations_id"], name: "index_users_on_sentimental_situations_id"
-    t.index ["sexual_identities_id"], name: "index_users_on_sexual_identities_id"
-    t.index ["situations_arrivals_countries_id"], name: "index_users_on_situations_arrivals_countries_id"
-    t.index ["studies_id"], name: "index_users_on_studies_id"
-    t.index ["you_want_to_dos_id"], name: "index_users_on_you_want_to_dos_id"
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   create_table "you_want_to_dos", force: :cascade do |t|

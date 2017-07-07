@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :user_steps
-  resources :user_availabilities
-  resources :users
+  get 'page/index'
+
+  devise_for :users
   resources :profiles
   resources :theme_interests
   resources :studies
@@ -30,4 +30,14 @@ Rails.application.routes.draw do
   resources :countries
   resources :country_categories
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  authenticated :user do
+    root 'countries#index', as: :authenticated_root
+  end
+  # redirect("/users/sign_in")
+  # root "page#index"
+
+  unauthenticated :user do
+    root 'page#index', as: :unauthenticated_root
+  end
+  #root to: 'devise/sessions#new', as: 'unauthenticated_root'
 end
