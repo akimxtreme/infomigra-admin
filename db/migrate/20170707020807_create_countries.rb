@@ -4,7 +4,7 @@ class CreateCountries < ActiveRecord::Migration[5.0]
       t.string :abbreviation
       t.string :name
       t.string :flag_image
-      t.references :country_categories, foreign_key: true
+      t.references :country_category, foreign_key: true
 
       t.timestamps
     end

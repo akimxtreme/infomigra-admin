@@ -8,8 +8,8 @@
       <th>Name</th>
       <th>Description</th>
       <th>Position</th>
-      <th>Category steps</th>
-      <th>Type steps</th>
+      <th>Category step</th>
+      <th>Type step</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,8 +20,8 @@
         <td><%= step.name %></td>
         <td><%= step.description %></td>
         <td><%= step.position %></td>
-        <td><%= step.category_steps %></td>
-        <td><%= step.type_steps %></td>
+        <td><%= step.category_step %></td>
+        <td><%= step.type_step %></td>
         <td><%= link_to 'Show', step %></td>
         <td><%= link_to 'Edit', edit_step_path(step) %></td>
         <td><%= link_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?' } %></td>

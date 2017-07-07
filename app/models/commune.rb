@@ -1,3 +1,5 @@
 class Commune < ApplicationRecord
-  belongs_to :provinces
+  belongs_to :province
+  
+  delegate :region, to: :province
 end

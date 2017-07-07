@@ -3,9 +3,9 @@
 one:
   name: MyString
   num_communes: 1
-  regions: one
+  region: one
 
 two:
   name: MyString
   num_communes: 1
-  regions: two
+  region: two

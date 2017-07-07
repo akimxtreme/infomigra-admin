@@ -17,7 +17,7 @@ class CommunesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create commune" do
     assert_difference('Commune.count') do
-      post communes_url, params: { commune: { name: @commune.name, provinces_id: @commune.provinces_id } }
+      post communes_url, params: { commune: { name: @commune.name, province_id: @commune.province_id } }
     end
 
     assert_redirected_to commune_url(Commune.last)
@@ -34,7 +34,7 @@ class CommunesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update commune" do
-    patch commune_url(@commune), params: { commune: { name: @commune.name, provinces_id: @commune.provinces_id } }
+    patch commune_url(@commune), params: { commune: { name: @commune.name, province_id: @commune.province_id } }
     assert_redirected_to commune_url(@commune)
   end
 

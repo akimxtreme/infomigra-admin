@@ -3,7 +3,7 @@ class CreateProvinces < ActiveRecord::Migration[5.0]
     create_table :provinces do |t|
       t.string :name
       t.integer :num_communes
-      t.references :regions, foreign_key: true
+      t.references :region, foreign_key: true
 
       t.timestamps
     end

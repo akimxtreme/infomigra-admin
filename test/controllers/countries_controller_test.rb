@@ -17,7 +17,7 @@ class CountriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create country" do
     assert_difference('Country.count') do
-      post countries_url, params: { country: { abbreviation: @country.abbreviation, country_categories_id: @country.country_categories_id, flag_image: @country.flag_image, name: @country.name } }
+      post countries_url, params: { country: { abbreviation: @country.abbreviation, country_category_id: @country.country_category_id, flag_image: @country.flag_image, name: @country.name } }
     end
 
     assert_redirected_to country_url(Country.last)
@@ -34,7 +34,7 @@ class CountriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update country" do
-    patch country_url(@country), params: { country: { abbreviation: @country.abbreviation, country_categories_id: @country.country_categories_id, flag_image: @country.flag_image, name: @country.name } }
+    patch country_url(@country), params: { country: { abbreviation: @country.abbreviation, country_category_id: @country.country_category_id, flag_image: @country.flag_image, name: @country.name } }
     assert_redirected_to country_url(@country)
   end
 

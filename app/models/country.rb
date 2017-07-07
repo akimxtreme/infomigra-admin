@@ -1,3 +1,3 @@
 class Country < ApplicationRecord
-  belongs_to :country_categories
+  belongs_to :country_category
 end

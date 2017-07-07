@@ -17,7 +17,7 @@ class FamilyBondsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create family_bond" do
     assert_difference('FamilyBond.count') do
-      post family_bonds_url, params: { family_bond: { description: @family_bond.description, name: @family_bond.name, percentage_profile: @family_bond.percentage_profile } }
+      post family_bonds_url, params: { family_bond: { description: @family_bond.description, name: @family_bond.name, percentage_profile: @family_bond.percentage_profile, slug: @family_bond.slug } }
     end
 
     assert_redirected_to family_bond_url(FamilyBond.last)
@@ -34,7 +34,7 @@ class FamilyBondsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update family_bond" do
-    patch family_bond_url(@family_bond), params: { family_bond: { description: @family_bond.description, name: @family_bond.name, percentage_profile: @family_bond.percentage_profile } }
+    patch family_bond_url(@family_bond), params: { family_bond: { description: @family_bond.description, name: @family_bond.name, percentage_profile: @family_bond.percentage_profile, slug: @family_bond.slug } }
     assert_redirected_to family_bond_url(@family_bond)
   end
 
