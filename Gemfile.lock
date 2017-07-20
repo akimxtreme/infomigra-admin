@@ -65,6 +65,7 @@ GEM
     arbre (1.1.1)
       activesupport (>= 3.0.0)
     arel (7.1.4)
+    awesome_print (1.8.0)
     bcrypt (3.1.11)
     bindex (0.5.0)
     bourbon (4.3.4)
@@ -241,6 +242,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  awesome_print
   byebug
   cancan
   coffee-rails (~> 4.2)
@@ -266,4 +268,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.15.1
+   1.15.2
