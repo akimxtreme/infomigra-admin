@@ -3,7 +3,11 @@ class CreateCountries < ActiveRecord::Migration[5.0]
     create_table :countries do |t|
       t.string :abbreviation
       t.string :name
+      t.string :name_cr
+      t.boolean :status
       t.string :flag_image
+      t.string :continent
+      t.integer :continent_number
       t.references :country_category, foreign_key: true
 
       t.timestamps

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'page/index'
+  get 'countries/countries_three'
 
   devise_for :users
   resources :countries

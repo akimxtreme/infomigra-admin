@@ -4,7 +4,20 @@ class CountriesController < ApplicationController
   # GET /countries
   # GET /countries.json
   def index
-    @countries = Country.all
+    @countries = Country.where(status:true, continent_number: [1,2,3,4,5]).order('continent_number ASC')
+    #@countries = Country.where(status:true).order('continent_number ASC')
+  end
+
+  # GET /countries_three
+  # GET /countries_three.json
+  def countries_three
+    @countries = Country.where(status:true, id: [46,88,234]).order('name DESC')
+    #@jtable = {'Result' => 'OK','Records' => @countries.map(&:attributes)}
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @countries}
+    end
   end
 
   # GET /countries/1

@@ -79,7 +79,11 @@ ActiveRecord::Schema.define(version: 20170707055843) do
   create_table "countries", force: :cascade do |t|
     t.string   "abbreviation"
     t.string   "name"
+    t.string   "name_cr"
+    t.boolean  "status"
     t.string   "flag_image"
+    t.string   "continent"
+    t.integer  "continent_number"
     t.integer  "country_category_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
