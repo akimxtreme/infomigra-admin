@@ -7,6 +7,17 @@ class SituationsArrivalsCountriesController < ApplicationController
     @situations_arrivals_countries = SituationsArrivalsCountry.all
   end
 
+  # GET /situations_arrivals_countries_three
+  # GET /situations_arrivals_countries_three.json
+  def situations_arrivals_countries_three
+    @situations_arrivals_countries = SituationsArrivalsCountry.where(status:true, id: [1,2,3]).order('name ASC')
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @situations_arrivals_countries}
+    end
+  end
+
   # GET /situations_arrivals_countries/1
   # GET /situations_arrivals_countries/1.json
   def show

@@ -277,3 +277,14 @@ Region.create!( id:12, name:'DE LOS LAGOS', roman_number:'X', num_provinces:4, n
 Region.create!( id:13, name:'AISÉN DEL GRAL. CARLOS IBAÑEZ DEL CAMPO ', roman_number:'XI', num_provinces:4, num_communes:10)
 Region.create!( id:14, name:'MAGALLANES Y DE LA ANTÁRTICA CHILENA', roman_number:'XII', num_provinces:4, num_communes:11)
 Region.create!( id:15, name:'METROPOLITANA DE SANTIAGO', roman_number:'RM', num_provinces:6, num_communes:52)
+
+# All Genders
+Gender.create!( id:1, name:'Femenino', abbreviation_1:'F', description: 'Del latín feminīnus, el término femenino se refiere a aquello que resulta propio, relativo o perteneciente a las mujeres. Se trata, por lo tanto, de algo o alguien que dispone de las características distintivas de la feminidad.')
+Gender.create!( id:2, name:'Masculino', abbreviation_1:'M', description: 'Con origen en el vocablo latino masculīnus, el término masculino hace referencia a un espécimen que posee los órganos adecuados para posibilitar una fecundación. El concepto abarca todo aquello que guarda relación con este individuo u organismo, y también permite identificar y reconocer aspectos o conductas varoniles.')
+
+# All SituationsArrivalsCountry
+SituationsArrivalsCountry.create!(id:1, name: 'Turista', name_cr: 'Touris', slug: 'turista', image: 'turista.png', percentage_profile: '10')
+SituationsArrivalsCountry.create!(id:2, name: 'Consular Estudiante', name_cr: 'Yon lòt', slug: 'consular_estudiante', image: 'consular_estudiante.png', percentage_profile: '10')
+SituationsArrivalsCountry.create!(id:3, name: 'Consular Sujeto a contrato', name_cr:'Viza konsilè sijè a kontra', slug: 'consular_sujeto_a_contrato', image: 'consular_sujeto_a_contrato.png', percentage_profile: '5')
+SituationsArrivalsCountry.create!(id:4, name: 'Consular Turista', name_cr:'Viza konsilè touris', slug: 'consular_turista', image: 'consular_turista.png', percentage_profile: '10')
+SituationsArrivalsCountry.create!(id:5, name: 'Otro', name_cr: 'Viza konsilè etidyan', slug: 'otro', image: 'otro.png', percentage_profile: '0')

@@ -84,9 +84,10 @@ ActiveRecord::Schema.define(version: 20170707055843) do
     t.string   "flag_image"
     t.string   "continent"
     t.integer  "continent_number"
+    t.boolean  "generic_image",       default: true
     t.integer  "country_category_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.index ["country_category_id"], name: "index_countries_on_country_category_id"
   end
 
@@ -222,11 +223,14 @@ ActiveRecord::Schema.define(version: 20170707055843) do
 
   create_table "situations_arrivals_countries", force: :cascade do |t|
     t.string   "name"
+    t.string   "name_cr"
     t.string   "slug"
+    t.string   "image"
     t.string   "description"
     t.decimal  "percentage_profile"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.boolean  "status",             default: true
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "steps", force: :cascade do |t|

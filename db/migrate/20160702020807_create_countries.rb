@@ -8,8 +8,8 @@ class CreateCountries < ActiveRecord::Migration[5.0]
       t.string :flag_image
       t.string :continent
       t.integer :continent_number
+      t.boolean :generic_image, default: true
       t.references :country_category, foreign_key: true
-
       t.timestamps
     end
   end

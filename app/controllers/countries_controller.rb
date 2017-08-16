@@ -11,7 +11,8 @@ class CountriesController < ApplicationController
   # GET /countries_three
   # GET /countries_three.json
   def countries_three
-    @countries = Country.where(status:true, id: [46,88,234]).order('name DESC')
+    @countries = Country.where(status:true, id: [46,88,234]).order('name ASC')
+    #@countries = Country.where(status:true, id: [118,40,174]).order('name ASC')
     #@jtable = {'Result' => 'OK','Records' => @countries.map(&:attributes)}
 
     respond_to do |format|

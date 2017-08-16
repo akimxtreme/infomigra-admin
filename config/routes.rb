@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get 'page/index'
   get 'countries/countries_three'
+  get 'situations_arrivals_countries/situations_arrivals_countries_three'
 
   devise_for :users
   resources :countries
