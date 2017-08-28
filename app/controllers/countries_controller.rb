@@ -4,15 +4,19 @@ class CountriesController < ApplicationController
   # GET /countries
   # GET /countries.json
   def index
-    @countries = Country.where(status:true, continent_number: [1,2,3,4,5]).order('continent_number ASC')
-    #@countries = Country.where(status:true).order('continent_number ASC')
+    @valor = params[:continent_id]
+    # @countries = Country.where(status:true, continent_number: [@valor]).order('continent_number ASC')
+      @countries = Country.joins(:country_category).where(status: true, continent_number: [@valor]).select(:id,:name,:name_cr,:flag_image,:generic_image,:country_category_id,'country_categories.percentage_profile AS country_category_percentage_profile')
+    # @countries = Country.where(status:true, continent_number: [1,2,3,4,5]).order('continent_number ASC')
+    # @countries = Country.where(status:true).order('continent_number ASC')
   end
 
   # GET /countries_three
   # GET /countries_three.json
   def countries_three
-    @countries = Country.where(status:true, id: [46,88,234]).order('name ASC')
-    #@countries = Country.where(status:true, id: [118,40,174]).order('name ASC')
+    # @countries = Country.where(status:true, id: [46,88,234]).order('name ASC')
+    @countries = Country.joins(:country_category).where(status: true, id: [46,88,234]).select(:id,:name,:name_cr,:flag_image,:generic_image,:country_category_id,'country_categories.percentage_profile AS country_category_percentage_profile')
+    #@countries = Country.where(status:true, id: [118,40,174]).order('name ASC') 
     #@jtable = {'Result' => 'OK','Records' => @countries.map(&:attributes)}
 
     respond_to do |format|
