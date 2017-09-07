@@ -4,12 +4,11 @@
 <table>
   <thead>
     <tr>
-      <th>Abbreviation</th>
       <th>Name</th>
       <th>Name Creol</th>
       <th>Flag image</th>
-      <th>Continent</th>
-      <th>Continent Number</th>
+      
+      
       <th>Country category</th>
       <th colspan="3"></th>
     </tr>
@@ -18,12 +17,11 @@
   <tbody>
     <% @countries.each do |country| %>
       <tr>
-        <td><%= country.abbreviation %></td>
         <td><%= country.name %></td>
         <td><%= country.name_cr %></td>
         <td><%= country.flag_image %></td>
-        <td><%= country.continent %></td>
-        <td><%= country.continent_number %></td>
+        
+       
         <td><%= country.country_category.id %></td>
         <td><%= link_to 'Show', country %></td>
         <td><%= link_to 'Edit', edit_country_path(country) %></td>
@@ -36,9 +34,3 @@
 <br>
 
 <%= link_to 'New Country', new_country_path %>
-<br>
-<!--
-<% @countries.each do |country| %>
-Country.create!(abbreviation:'<%= country.abbreviation %>',name:'<%= country.name %>',flag_image:'<%= country.flag_image %>',country_category_id:<%= country.country_category.id %>, name_cr:'', status:true)<br>
-<% end %>
--->

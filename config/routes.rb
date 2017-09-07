@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'page/index'
   get 'countries/countries_three'
   get 'situations_arrivals_countries/situations_arrivals_countries_three'
+  get 'current_statuses/current_statuses_three'
 
   devise_for :users
   resources :countries
@@ -36,13 +37,15 @@ Rails.application.routes.draw do
   resources :regions
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   authenticated :user do
-    root 'countries#index', as: :authenticated_root
+    root to: "admin/dashboard#index"
+    #root 'countries#index', as: :authenticated_root
   end
   # redirect("/users/sign_in")
   # root "page#index"
 
   unauthenticated :user do
-    root 'page#index', as: :unauthenticated_root
+    root to: "admin/dashboard#index"
+    #root 'page#index', as: :unauthenticated_root
   end
   #root to: 'devise/sessions#new', as: 'unauthenticated_root'
 end

@@ -288,3 +288,10 @@ SituationsArrivalsCountry.create!(id:2, name: 'Consular Estudiante', name_cr: 'Y
 SituationsArrivalsCountry.create!(id:3, name: 'Consular Sujeto a contrato', name_cr:'Viza konsilè sijè a kontra', slug: 'consular_sujeto_a_contrato', image: 'consular_sujeto_a_contrato.png', percentage_profile: '5')
 SituationsArrivalsCountry.create!(id:4, name: 'Consular Turista', name_cr:'Viza konsilè touris', slug: 'consular_turista', image: 'consular_turista.png', percentage_profile: '10')
 SituationsArrivalsCountry.create!(id:5, name: 'Otro', name_cr: 'Viza konsilè etidyan', slug: 'otro', image: 'otro.png', percentage_profile: '0')
+
+# All CurrentStatus
+CurrentStatus.create!(id:1, name: 'Turista', name_cr: 'Touris', slug: 'turista', image: 'turista.png', percentage_profile: '10')
+CurrentStatus.create!(id:2, name: 'Consular Estudiante', name_cr: 'Yon lòt', slug: 'consular_estudiante', image: 'consular_estudiante.png', percentage_profile: '10')
+CurrentStatus.create!(id:3, name: 'Consular Sujeto a contrato', name_cr:'Viza konsilè sijè a kontra', slug: 'consular_sujeto_a_contrato', image: 'consular_sujeto_a_contrato.png', percentage_profile: '5')
+CurrentStatus.create!(id:4, name: 'Consular Turista', name_cr:'Viza konsilè touris', slug: 'consular_turista', image: 'consular_turista.png', percentage_profile: '10')
+CurrentStatus.create!(id:5, name: 'Otro', name_cr: 'Viza konsilè etidyan', slug: 'otro', image: 'otro.png', percentage_profile: '0')
