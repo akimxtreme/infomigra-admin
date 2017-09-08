@@ -143,11 +143,14 @@ ActiveRecord::Schema.define(version: 20170707055843) do
 
   create_table "family_bonds", force: :cascade do |t|
     t.string   "name"
+    t.string   "name_cr"
     t.string   "slug"
+    t.string   "image"
     t.string   "description"
     t.decimal  "percentage_profile"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.boolean  "status",             default: true
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "genders", force: :cascade do |t|
