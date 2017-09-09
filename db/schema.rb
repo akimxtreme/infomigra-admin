@@ -241,7 +241,11 @@ ActiveRecord::Schema.define(version: 20170707055843) do
 
   create_table "steps", force: :cascade do |t|
     t.string   "name"
+    t.string   "name_cr"
     t.text     "description"
+    t.text     "description_cr"
+    t.boolean  "internal"
+    t.string   "url"
     t.integer  "position"
     t.integer  "category_step_id"
     t.integer  "type_step_id"
@@ -268,8 +272,9 @@ ActiveRecord::Schema.define(version: 20170707055843) do
   create_table "type_steps", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "status",      default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "user_availabilities", force: :cascade do |t|

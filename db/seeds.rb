@@ -300,3 +300,47 @@ CurrentStatus.create!(id:5, name: 'Otro', name_cr: 'Viza konsilè etidyan', slug
 FamilyBond.create!(id:1, name: 'Familiar chileno', name_cr: 'Fanmiy chilyen', slug: 'familiar_chileno', image: 'familiar_chileno.png', percentage_profile: '10')
 FamilyBond.create!(id:2, name: 'No tengo vínculos', name_cr: 'Mwen pa gen lyen', slug: 'sin_vinculo', image: 'sin_vinculo.png', percentage_profile: '0')
 FamilyBond.create!(id:3, name: 'Familiar con permanencia definitiva', name_cr:'Fanmiy ki genyen pèmanans definitif', slug: 'familiar_migrante_con_definitiva', image: 'familiar_migrante_con_definitiva.png', percentage_profile: '10')
+
+
+# All CategoryStep
+CategoryStep.create!(id:1, name: 'Apoyo', icon: 'apoyo.png')
+CategoryStep.create!(id:2, name: 'Documento', icon:'documentos.png')
+CategoryStep.create!(id:3, name: 'Educacion', icon:'educacion.png')
+CategoryStep.create!(id:4, name: 'Salud', icon:'salud.png')
+CategoryStep.create!(id:5, name: 'Trabajo', icon:'trabajo.png')
+CategoryStep.create!(id:6, name: 'Tramites Migratorios', icon:'tramites-migratorios.png')
+CategoryStep.create!(id:7, name: 'Vivienda', icon:'vivienda.png')
+CategoryStep.create!(id:8, name: 'General', icon:'general.png')
+
+# All TypeStep
+TypeStep.create!(id:1, name:'Genericos')
+TypeStep.create!(id:2, name:'Sujeta a contrato consular')
+TypeStep.create!(id:3, name:'EMBARAZADAS y hombres con mujer embarazada')
+TypeStep.create!(id:4, name:'Familiar Chileno, Familiar migrante con la definitiva')
+TypeStep.create!(id:5, name:'current_status: otros')
+TypeStep.create!(id:6, name:'current_status: !otros')
+TypeStep.create!(id:7, name:'Clandestino irregular embarazada o con mujer embarazada')
+TypeStep.create!(id:8, name:'Trabajador/a profesional con contrato de trabajo (Paises con tratado)')
+TypeStep.create!(id:9, name:'turista consular')
+TypeStep.create!(id:10, name:'temporaria por motivos laborales')
+TypeStep.create!(id:11, name:'clandestino irregular')
+TypeStep.create!(id:12, name:'Turista/estudiante')
+TypeStep.create!(id:13, name:'turista')
+TypeStep.create!(id:14, name:'Permanencia definitiva')
+TypeStep.create!(id:15, name:'tramite de estudios')
+TypeStep.create!(id:16, name:'en tramite de permanencia definitiva (a este perfíl no agregarle más pasos génericos, es SOLAMENTE esto)')
+TypeStep.create!(id:17, name:'temporaria')
+TypeStep.create!(id:18, name:'Estudiante consular')
+TypeStep.create!(id:19, name:'Mercosur')
+TypeStep.create!(id:20, name:'Trabajador/a profesional con contrato de trabajo (Sin tratado)')
+TypeStep.create!(id:21, name:'Trabajador/a profesional con contrato de trabajo (Sin tratado)')
+
+
+# All Step
+#Step.create!(name: '', name_cr: '', description:'', description_cr: '', internal: '', url:'', category_step: 0, type_step: 0 )
+#Step.create!(name: '', name_cr: '', type_step:, category_step: , description: '', description_cr:'', internal: , url: '' 0)
+
+
+
+
+
