@@ -4,7 +4,9 @@ class StepsController < ApplicationController
   # GET /steps
   # GET /steps.json
   def index
-    @steps = Step.all
+    #@steps = Step.all
+    @steps = Step.last(30).reverse
+    
   end
 
   # GET /steps/1
