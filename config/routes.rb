@@ -10,8 +10,13 @@ Rails.application.routes.draw do
   get 'countries/countries_three'
   get 'situations_arrivals_countries/situations_arrivals_countries_three'
   get 'current_statuses/current_statuses_three'
+  get 'api/communes'
+  get 'api/countries'
+  get 'api/countries_three'
+  get 'api/authentication'
+  get 'api/sign_up'
 
-  devise_for :users
+  #devise_for :users
   resources :countries
   resources :profiles
   resources :theme_interests
@@ -35,6 +40,12 @@ Rails.application.routes.draw do
   resources :current_situation_countries
   resources :situations_arrivals_countries
   resources :regions
+
+  #Routes API IONIC
+  namespace :api, :defaults => {:format => 'json'} do
+    devise_for :users
+  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   authenticated :user do
     root to: "admin/dashboard#index"

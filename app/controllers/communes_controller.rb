@@ -4,7 +4,9 @@ class CommunesController < ApplicationController
   # GET /communes
   # GET /communes.json
   def index
-    @communes = Commune.all
+    #@communes = Commune.all
+    #format.json { render :json => {:result => 'ERROR'} }
+    format.json { head :no_content }
   end
 
   # GET /communes/1

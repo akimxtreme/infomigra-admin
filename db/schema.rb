@@ -296,20 +296,60 @@ ActiveRecord::Schema.define(version: 20170707055843) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                             default: ""
+    t.string   "encrypted_password",                default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",                     default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.string   "nickname"
+    t.string   "first_name"
+    t.string   "second_name"
+    t.string   "first_surname"
+    t.string   "second_surname"
+    t.string   "status"
+    t.integer  "country_id"
+    t.integer  "comuna_id"
+    t.integer  "gender_id"
+    t.integer  "sexual_identity_id"
+    t.integer  "situation_arrival_country_id"
+    t.integer  "year_country"
+    t.integer  "month_country"
+    t.integer  "current_situation_countries_id"
+    t.integer  "year_current_situation_countries"
+    t.integer  "month_current_situation_countries"
+    t.integer  "current_status_id"
+    t.integer  "you_want_to_do_id"
+    t.integer  "sentimental_situation_id"
+    t.boolean  "person_waiting_for_a_child"
+    t.integer  "family_bond_id"
+    t.integer  "profile_id"
+    t.date     "birthdate"
+    t.string   "rut"
+    t.string   "street_number"
+    t.string   "latitude_y"
+    t.string   "length_x"
+    t.integer  "distance_id"
+    t.integer  "level_study_id"
+    t.date     "date_work_start"
+    t.date     "date_work_end"
+    t.boolean  "date_work_end_undefined"
+    t.integer  "study_id"
+    t.string   "phone"
+    t.string   "description_latest_works"
+    t.string   "description_tasks_performed"
+    t.string   "api_key"
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+    t.index ["api_key"], name: "index_users_on_api_key", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["nickname"], name: "index_users_on_nickname", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["rut"], name: "index_users_on_rut", unique: true
   end
 
   create_table "you_want_to_dos", force: :cascade do |t|
